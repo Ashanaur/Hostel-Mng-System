@@ -7,7 +7,6 @@
         protected $con;
         protected $result;
         protected $sql;
-
         
         /**
          * This is a construct method use for database connection..
@@ -21,6 +20,12 @@
             }
             return $this->con;
         }
+
+        /* 
+        this is destruct method for use database disconnect
+        */
+        public function __destruct(){
+            $this->con->close();
     }
 
 ?>
